@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container-transition {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: green;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.transition {
+  height: 50px;
+  width: 10px;
+  background-color: blue;
+  -webkit-transition: background-color 1s 1s, width 1s, height 1s 0.5s;
+  transition: background-color 1s 1s, width 1s, height 1s 0.5s;
+  -webkit-animation: bloc-bounce 4s infinite alternate forwards;
+          animation: bloc-bounce 4s infinite alternate forwards;
+}
+
+.transition:hover {
+  -webkit-transition: background-color 0.5s, width 0.5s, height 0.5s 0.5s;
+  transition: background-color 0.5s, width 0.5s, height 0.5s 0.5s;
+  background-color: yellow;
+  width: 500px;
+  height: 400px;
+}
+
+@-webkit-keyframes bloc-bounce {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
+
+@keyframes bloc-bounce {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
+
+.container-heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 128px;
+  height: 100vh;
+}
+
+.container-heart .fa-heart {
+  -webkit-animation: naruto 1s infinite alternate;
+          animation: naruto 1s infinite alternate;
+}
+
+.container-heart .fa-heart:hover {
+  -webkit-animation: paused;
+          animation: paused;
+}
+
+body {
+  -webkit-animation: color-change 3s infinite alternate;
+          animation: color-change 3s infinite alternate;
+}
+
+@-webkit-keyframes naruto {
+  0% {
+    -webkit-transform: translate(100px);
+            transform: translate(100px);
+  }
+  100% {
+    -webkit-transform: translate(-100px);
+            transform: translate(-100px);
+  }
+}
+
+@keyframes naruto {
+  0% {
+    -webkit-transform: translate(100px);
+            transform: translate(100px);
+  }
+  100% {
+    -webkit-transform: translate(-100px);
+            transform: translate(-100px);
+  }
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: pink;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: pink;
+  }
+  100% {
+    background-color: red;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container-transition {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  background-color: green;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.transition {
+  height: 50px;
+  width: 10px;
+  background-color: blue;
+  transition: background-color 1s 1s, width 1s, height 1s 0.5s;
+  animation: bloc-bounce 4s infinite alternate forwards;
+}
+
+.transition:hover {
+  transition: background-color 0.5s, width 0.5s, height 0.5s 0.5s;
+  background-color: yellow;
+  width: 500px;
+  height: 400px;
+}
+
+@keyframes bloc-bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
+
+.container-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 128px;
+  height: 100vh;
+
+  .fa-heart {
+    animation: naruto 1s infinite alternate;
+  }
+
+  .fa-heart:hover {
+    animation: paused;
+  }
+}
+
+body {
+  animation: color-change 3s infinite alternate;
+}
+
+@keyframes naruto {
+  0% {
+    transform: translate(100px);
+  }
+  100% {
+    transform: translate(-100px);
+  }
+}
+
+@keyframes color-change {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: pink;
+  }
+  100% {
+    background-color: red;
+  }
+}
