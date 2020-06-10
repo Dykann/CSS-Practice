@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(300, 20%, 30%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.title {
+  font-weight: 800;
+  color: #3023ae;
+}
+
+header {
+  background-color: #3ebd93;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.card {
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 480px;
+  margin: auto;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.card hr {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #d3d3d3;
+  margin: 12px;
+}
+
+.card input[type="text"] {
+  font-size: 16px;
+  width: 100%;
+  margin: 16px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #d3d3d3;
+}
+
+.button-card {
+  font-size: 16px;
+  padding: 8px 12px;
+  background: #3ebd93;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button-card:hover {
+  background: #65d6ad;
+  transition: background 0.1s ease-in;
+}
+
+.container {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+  align-content: center;
+  grid-gap: 64px;
+}
+
+.img-card {
+  overflow: hidden;
+  position: relative;
+  height: 360px;
+}
+.img-card:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.img-card img {
+  height: 256px;
+}
+
+.img-card button {
+  padding: 8px 16px;
+  background-color: #da127d;
+  border-radius: 4px;
+  border: none;
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+@media (max-width: 768px) {
+  body {
+    background: linear-gradient(160deg, #3023ae 100%, #c86dd7 100%);
+    font-weight: 100;
+  }
+  header {
+    margin-bottom: 6px;
+  }
+}
