@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.btn {
+  color: white;
+  background-color: cornflowerblue;
+  border: none;
+  outline: none;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+
+.btn:hover {
+  animation: opacity 500ms ease-in-out infinite, bigger 1s ease-in-out infinite;
+}
+
+.btn:focus {
+  animation: fly 500ms ease-in-out forwards;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bigger {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fly {
+  33% {
+    transform: translate(100px, 50px) rotate(30deg) scale(0.9);
+  }
+
+  66% {
+    transform: translate(0, 25px) rotate(90deg) scale(0.75);
+  }
+
+  100% {
+    transform: translate(-100px, -75px) rotate(200deg) scale(0.25);
+  }
+}
