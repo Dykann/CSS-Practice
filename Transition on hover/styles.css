@@ -57,3 +57,7 @@ div:hover::before {
 div:hover::after {
   transform: translateX(0);
 }
+
+.open {
+  background-color: black;
+}
